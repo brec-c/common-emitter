@@ -5,7 +5,7 @@
 # If we're in NodeJS then just return the real EventEmitter
 if typeof exports isnt 'undefined'
 	if typeof module isnt 'undefined' and module.exports
-		exports.module = require('events').EventEmitter
+		exports = module.exports = require('events').EventEmitter
 		return
 
 # WE REQUIRE '_' (underscore)
