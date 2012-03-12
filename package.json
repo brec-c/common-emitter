@@ -1,5 +1,5 @@
 {
-	"name"              : "emitter"
+	"name"              : "common-emitter"
 	,"description"      : "Common EventEmitter implementation for both server-side NodeJS and client-side Browser environments."
 	,"homepage"         : "http://not-up-yet.com"
 	,"keywords"         : ["events","emitter","server","client"]
