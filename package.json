@@ -4,6 +4,7 @@
 	,"homepage"         : "http://not-up-yet.com"
 	,"keywords"         : ["events","emitter","server","client"]
 	,"author"           : "brec-c"
+	,"engines"          : {"node":"*"}
 	,"licenses"         : [{"type":"MIT","url":"https://github.com/brec-c/common-emitter/blob/master/LICENSE"}]
 	,"repository"       : {"type":"git", "url": "git://github.com/brec-c/common-emitter.git"}
 	,"main"             : "index.js"
