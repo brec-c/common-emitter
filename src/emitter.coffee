@@ -3,13 +3,14 @@
 # Determine environment: NodeJS vs Browser
 
 # If we're in NodeJS then just return the real EventEmitter
+# if typeof _coffeeVarAssumption is 'undefined'
 if typeof exports isnt 'undefined'
 	if typeof module isnt 'undefined' and module.exports
-		exports = module.exports = require('events').EventEmitter
-		return
+		return module.exports = require('events').EventEmitter
 
-# WE REQUIRE '_' (underscore)
-throw new Error "Underscore library required for Browser use." unless window['_']?
+# # WE REQUIRE '_' (underscore)
+# throw new Error "Underscore library required for Browser use." unless window['_']?
+_ = require 'underscore'
 
 		
 # In the Browser, let's implement EventEmitter
