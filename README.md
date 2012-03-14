@@ -1,6 +1,6 @@
 #EventEmitter Everywhere… Excelsior!
 
-Sorry, couldn't resist the alliteration.  One of the ironies of the emergence of NodeJS is that for all the glory it brings to Javascript it also is at odds with the place where Javascript has reigned supreme for many years, the browser.  Most of the NodeJS libraries are unavailable in the browser.  The Events module's EventEmitter was one of those features that exists NodeJS side but not in the browser.  This was mostly limiting not because the browser couldn't handle it but because righting code that could / should run everywhere needed to becareful to use common libraries.  __Common-Emitter__ is meant to help alleviate that issue. 
+Sorry, couldn't resist the alliteration.  One of the ironies of the emergence of NodeJS is that for all the glory it brings to Javascript it also is at odds with the place where Javascript has reigned supreme for many years, the browser.  Most of the NodeJS libraries are unavailable in the browser.  The Events module's EventEmitter was one of those features that exists NodeJS side but not in the browser.  This was mostly limiting not because the browser couldn't handle it but because writing code that could / should run everywhere needed to becareful to use common libraries.  __Common-Emitter__ is meant to help alleviate that issue. 
 
 #Installation
 npm install common-emitter
