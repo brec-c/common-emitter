@@ -8,10 +8,10 @@ if typeof exports isnt 'undefined'
 	if typeof module isnt 'undefined' and module.exports
 		return module.exports = require('events').EventEmitter
 
-# # WE REQUIRE '_' (underscore)
-# throw new Error "Underscore library required for Browser use." unless window['_']?
-_ = require 'underscore'
-
+# WE REQUIRE '_' (underscore)
+_ = window['_']
+unless _? then _ = require 'underscore'
+throw new Error "Underscore library required for Browser use." unless _?
 		
 # In the Browser, let's implement EventEmitter
 class Emitter
