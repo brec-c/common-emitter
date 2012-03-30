@@ -2,11 +2,9 @@
 
 # Determine environment: NodeJS vs Browser
 
-# If we're in NodeJS then just return the real EventEmitter
-# if typeof _coffeeVarAssumption is 'undefined'
-if typeof exports isnt 'undefined'
-	if typeof module isnt 'undefined' and module.exports
-		return module.exports = require('events').EventEmitter
+{isNodeJS} = require 'detectify'
+
+if isNodeJS then return module.exports = require('events').EventEmitter
 
 # WE REQUIRE '_' (underscore)
 _ = window['_']
@@ -37,7 +35,7 @@ class Emitter
 		unless @__listeners? and @__listeners[event]? then return
 		@__listeners[event] = _.without @__listeners[event], (entry) ->
 			entry.listener is listener
-		
+
 	removeAllListeners: (event=null) ->
 		unless @__listeners? and @__listeners[event]? then return
 
@@ -66,3 +64,4 @@ class Emitter
 				@__listeners[event] = _.without(@__listeners[event], detach)
 	
 window['Emitter'] = Emitter
+module.exports = Emitter
