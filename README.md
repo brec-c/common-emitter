@@ -1,4 +1,4 @@
-#Not
+#Please Note:
 
 Discontinued.  Please use [EventEmitter2](https://github.com/hij1nx/EventEmitter2) instead.  That's what I'm going to do.
 
